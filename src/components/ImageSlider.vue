@@ -83,6 +83,7 @@ export default defineComponent({
 					imgs: [
 						{
 							src: require('@/assets/webp/code.webp'),
+							srcset: [require('@/assets/webp/code-half.webp') + ' 720w, ' + require('@/assets/webp/code.webp') + ' 721w'],
 							alt: 'Help Image',
 							id: 'help',
 						},
@@ -193,11 +194,11 @@ export default defineComponent({
 		background-color: var(--bg-4);
 		transform: translateY(-50%);
 		border-radius: 0 8px 8px 0;
-		transition: 0.3s ease;
+		transition: background-color 0.3s ease;
 		position: absolute;
 		user-select: none;
 		font-size: 18px;
-		padding: 16px;
+		padding: var(--m);
 		top: 50%;
 
 		&#next {

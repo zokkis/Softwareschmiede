@@ -125,11 +125,6 @@ header {
 	display: flex;
 	align-items: center;
 
-	> * {
-		display: flex;
-		align-items: center;
-	}
-
 	img {
 		height: 100%;
 		margin-right: var(--xs);
