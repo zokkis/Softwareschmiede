@@ -32,7 +32,7 @@ module.exports = defineConfig({
 					htmlPluginData.html = insertLinksIntoHead(htmlPluginData.html, links);
 					htmlPluginData.html = htmlPluginData.html.replace(
 						/<link href="\/css\/app\.(.+)\.css" rel="stylesheet">/,
-						'<link href="/css/app.$1.css" type="text/css" rel="preload" async>'
+						'<link href="/css/app.$1.css" rel="stylesheet" async>'
 					);
 					return htmlPluginData;
 				};
