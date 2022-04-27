@@ -1,8 +1,9 @@
 const { defineConfig } = require('@vue/cli-service');
 
+// set type correctly to fileending
 const options = {
 	excludeHtmlNames: [],
-	fileWhitelist: [/^html(.)+\.webp$/],
+	fileWhitelist: [/html(.)+\.webp$/],
 };
 
 module.exports = defineConfig({
@@ -12,20 +13,27 @@ module.exports = defineConfig({
 	chainWebpack: config => {
 		config.plugin('preload').use({
 			apply: compiler => {
-				const createHTMLElementString = href => `<link href=${href} rel="preload">`;
+				const createHTMLElementString = href => `<link href=/${href} type="image/webp" rel="preload" async>`;
 				const insertLinksIntoHead = (html, links = []) => (links.length ? html.replace('</head>', links.join('') + '</head>') : html);
 
 				const addLinks = (compilation, htmlPluginData) => {
 					const links = [];
 					[...compilation.chunks]
-						.find(c => c.id === 'app')
+						.find(c => c.name === 'app')
 						.auxiliaryFiles.forEach(file => {
-							if (options.fileWhitelist.every(regex => regex.test(file)) && !options.excludeHtmlNames.every(regex => regex.test(file))) {
+							if (
+								options.fileWhitelist.every(regex => regex.test(file)) &&
+								(!options.excludeHtmlNames.length || !options.excludeHtmlNames.every(regex => regex.test(file)))
+							) {
 								links.push(createHTMLElementString(file));
 							}
 						});
 
 					htmlPluginData.html = insertLinksIntoHead(htmlPluginData.html, links);
+					htmlPluginData.html = htmlPluginData.html.replace(
+						/<link href="\/css\/app\.(.+)\.css" rel="stylesheet">/,
+						'<link href="/css/app.$1.css" type="text/css" rel="preload" async>'
+					);
 					return htmlPluginData;
 				};
 
