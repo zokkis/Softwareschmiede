@@ -1,4 +1,5 @@
 const { defineConfig } = require('@vue/cli-service');
+const fs = require('fs');
 
 // set type correctly to fileending
 const options = {
@@ -34,6 +35,8 @@ module.exports = defineConfig({
 						/<link href="\/css\/app\.(.+)\.css" rel="stylesheet">/,
 						'<link href="/css/app.$1.css" rel="stylesheet" async>'
 					);
+
+					fs.existsSync('./dist') && fs.writeFileSync('./dist/sitemap.xml', fs.readFileSync('./sitemap.xml'));
 					return htmlPluginData;
 				};
 
