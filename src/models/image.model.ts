@@ -3,6 +3,7 @@ export interface ImageData {
 	srcset?: string;
 	alt: string;
 	id?: string;
+	lazy?: boolean;
 }
 
 // only optionals

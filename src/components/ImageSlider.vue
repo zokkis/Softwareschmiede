@@ -43,18 +43,10 @@ export default defineComponent({
 					href: 'website',
 					imgs: [
 						{
-							src: require('@/assets/half/html-1x.jpeg'),
-							srcset:
-								require('@/assets/half/html-1x.jpeg') +
-								' 450w, ' +
-								require('@/assets/half/html-2x.jpeg') +
-								' 720w, ' +
-								require('@/assets/full/html-1x.jpeg') +
-								' 1280w, ' +
-								require('@/assets/full/html-2x.jpeg') +
-								' 1920w, ',
+							src: require('@/assets/webp/html.webp'),
 							alt: 'Code Image',
 							id: 'code',
+							lazy: false,
 						},
 					],
 				},
@@ -63,16 +55,7 @@ export default defineComponent({
 					href: 'api',
 					imgs: [
 						{
-							src: require('@/assets/half/api-bg-1x.jpeg'),
-							srcset:
-								require('@/assets/half/api-bg-1x.jpeg') +
-								' 450w, ' +
-								require('@/assets/half/api-bg-2x.jpeg') +
-								' 720w, ' +
-								require('@/assets/full/api-bg-1x.jpeg') +
-								' 1280w, ' +
-								require('@/assets/full/api-bg-2x.jpeg') +
-								' 1920w, ',
+							src: require('@/assets/webp/api-bg.webp'),
 							alt: 'API bg Image',
 							id: 'app-bg',
 						},
@@ -99,16 +82,7 @@ export default defineComponent({
 					href: 'help',
 					imgs: [
 						{
-							src: require('@/assets/half/code-1x.jpeg'),
-							srcset:
-								require('@/assets/half/code-1x.jpeg') +
-								' 450w, ' +
-								require('@/assets/half/code-2x.jpeg') +
-								' 720w, ' +
-								require('@/assets/full/code-1x.jpeg') +
-								' 1280w, ' +
-								require('@/assets/full/code-2x.jpeg') +
-								' 1920w, ',
+							src: require('@/assets/webp/code.webp'),
 							alt: 'Help Image',
 							id: 'help',
 						},

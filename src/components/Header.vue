@@ -30,7 +30,6 @@ import { sampleTime } from 'rxjs/operators';
 export default defineComponent({
 	name: 'Header',
 	mounted() {
-		this.navTitleHeight = this.getNavTitleHeight;
 		this.setShowLogo();
 		this.navLinkContainer.addEventListener('mouseout', ev => (ev.target as HTMLAnchorElement)?.blur());
 		fromEvent(window, 'resize').pipe(sampleTime(250)).subscribe(this.onResize);
@@ -42,7 +41,6 @@ export default defineComponent({
 	},
 	data() {
 		return {
-			navTitleHeight: '',
 			navLinkFocusable: !window.matchMedia('(max-width: 685px)').matches,
 			showLogo: true,
 			multiplier: 1,
@@ -95,12 +93,6 @@ export default defineComponent({
 		},
 	},
 	computed: {
-		getNavTitle(): HTMLDivElement {
-			return this.$el.querySelector('.nav-title')!;
-		},
-		getNavTitleHeight(): string {
-			return this.$el.querySelector('.nav-title h1').clientHeight + 'px';
-		},
 		navLinkContainer(): HTMLDivElement {
 			return this.$el.querySelector('.nav-links-container');
 		},

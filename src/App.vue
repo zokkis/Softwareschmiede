@@ -92,16 +92,7 @@ import References from './components/References.vue';
 							text: 'Um schnell und unkompliziert eine API zu programmieren hilft Node.js in kombination mit Express.js. Über einfache Anfragen an die API bekommt man immer schnell und zuverlässig die benötigeten Daten und genauso einfach ist es Daten an die API zu senden, welche alles wie benötigt zb. in eine MySQL Datenbank gespeichert, als E-Mail weiter geleitet oder einfach als Datei auf Ihren Computer gepeichert werden kann. Alles das habe bereits für die API für meine App <a href="#foodmood-ref" class="filter underline" tabindex="-1">FoodMood</a> im Einsatz und kann jeder unkompliziert verwenden. Genauso greift die Business-App und -Website auf meiner Arbeit auf der von mir mitentwickelte API zu und habe dabei auch Praxis mit Oracle-Datenbankmanagementsystem. Wenn Sie genaueres erfahren möchten stehe ich jeder Zeit zur verfügung unter der unten genannten <a href="#contact-ref" class="filter underline" tabindex="-1">Nummer und E-Mail</a>.',
 							imgs: [
 								{
-									src: require('@/assets/full/api-bg-1x.jpeg'),
-									srcset:
-										require('@/assets/half/api-bg-1x.jpeg') +
-										' 450w, ' +
-										require('@/assets/half/api-bg-2x.jpeg') +
-										' 720w, ' +
-										require('@/assets/full/api-bg-1x.jpeg') +
-										' 1280w, ' +
-										require('@/assets/full/api-bg-2x.jpeg') +
-										' 1920w, ',
+									src: require('@/assets/webp/api-bg.webp'),
 									alt: 'API-bg',
 								},
 								{
@@ -145,16 +136,7 @@ import References from './components/References.vue';
 							text: 'Auch wenn Sie zur Zeit ein Projekt haben und nicht weiter kommen oder hilfe dabei benötigen bin ich dafür bereit. Ich musste mich schon öfter in bestehende Projekte einarbeiten und habe das immer sehr schnell und zuverlässig gemacht. Genauso kann ich auch als Aussenstehender ihre Projekte auf intuitive Bedienung, funktion und vieles mehr testen. Dabei kann ich Ihnen auch gerne für Ihr Projekt in einen passenden Testframework automatische Tests programmieren. Dabei habe ich Erfahrung in den Programmiersprachen Java, Python, Javascript und Ruby.',
 							imgs: [
 								{
-									src: require('@/assets/full/code-1x.jpeg'),
-									srcset:
-										require('@/assets/half/code-1x.jpeg') +
-										' 450w, ' +
-										require('@/assets/half/code-2x.jpeg') +
-										' 720w, ' +
-										require('@/assets/full/code-1x.jpeg') +
-										' 1280w, ' +
-										require('@/assets/full/code-2x.jpeg') +
-										' 1920w, ',
+									src: require('@/assets/webp/code.webp'),
 									alt: 'Help',
 								},
 							],

@@ -1,6 +1,21 @@
 <template>
-	<img :[isSrc]="img.src" :alt="img.alt" :id="img.id" v-show="show" v-if="!img.srcset && onceShowen" loading="lazy" />
-	<img :[isSrc]="img.src" :[isSrcSet]="img.srcset" :alt="img.alt" :id="img.id" v-show="show" v-else-if="onceShowen" loading="lazy" />
+	<img
+		:[isSrc]="img.src"
+		:alt="img.alt"
+		:id="img.id"
+		v-show="show"
+		v-if="!img.srcset && onceShowen"
+		:loading="img.lazy === false ? 'eager' : 'lazy'"
+	/>
+	<img
+		:[isSrc]="img.src"
+		:[isSrcSet]="img.srcset"
+		:alt="img.alt"
+		:id="img.id"
+		v-show="show"
+		v-else-if="onceShowen"
+		:loading="img.lazy === false ? 'eager' : 'lazy'"
+	/>
 </template>
 
 <script lang="ts">
