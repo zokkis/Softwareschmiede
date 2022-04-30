@@ -2,7 +2,7 @@
 	<div class="slide" v-bind:class="{ active: active }">
 		<div>
 			<h4>{{ slideData.title }}</h4>
-			<a :href="'#' + slideData.href + '-ref'" :[isTabindex()]="-1" class="filter">Referenzen</a>
+			<a :href="'#' + slideData.href + '-ref'" :[isTabindex()]="-1" class="filter underline">Referenzen</a>
 		</div>
 		<LazyImage v-for="(img, index) in slideData.imgs" :key="index" :img="img" :show="active" />
 	</div>
@@ -85,7 +85,6 @@ export default defineComponent({
 
 		a {
 			font-size: clamp(var(--l), 2.5vw, var(--xl));
-			text-decoration: underline;
 			margin-top: 8px;
 			float: right;
 			margin: 0;

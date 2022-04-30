@@ -5,11 +5,11 @@
 			<div>
 				<p>
 					Telefon:&nbsp;
-					<a href="tel:+4915224786034" class="filter">+49 1522 4786034</a>
+					<a href="tel:+4915224786034" class="filter underline">+49 1522 4786034</a>
 				</p>
 				<p>
 					E-Mail:&nbsp;
-					<a href="mailto:tim.zokki@gmail.com" class="filter">tim.zokki@gmail.com</a>
+					<a href="mailto:zokki.softwareschmiede@gmail.com" class="filter underline">zokki.softwareschmiede@gmail.com</a>
 				</p>
 			</div>
 		</div>
@@ -38,11 +38,6 @@ footer {
 		strong,
 		p {
 			margin: var(--xs) 0;
-		}
-
-		a {
-			text-decoration: underline;
-			transition: filter 0.1s;
 		}
 	}
 

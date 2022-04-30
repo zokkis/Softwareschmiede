@@ -251,6 +251,7 @@ a {
 
 	&.filter:hover {
 		filter: brightness(75%);
+		transition: filter 0.1s;
 	}
 
 	@supports selector(:focus-visible) {
